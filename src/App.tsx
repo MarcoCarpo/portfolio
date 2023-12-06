@@ -1,6 +1,6 @@
 import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
 import { useData } from './helpers/customHooks';
-import { Icon } from './components';
+import { Container, Icon } from './components';
 
 function App() {
     const { data, isLoading } = useData();
@@ -10,9 +10,9 @@ function App() {
     }
 
     return (
-        <div>
+        <Container>
             {data?.bio.name} <Icon icon={faCircleUser} />
-        </div>
+        </Container>
     );
 }
 

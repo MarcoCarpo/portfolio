@@ -1,11 +1,3 @@
 @use 'variables';
 @use 'typography';
-
-* {
-	box-sizing: border-box;
-}
-
-html {
-	font-family: 'JetBrains Mono', monospace;
-	background-color: var(--background);
-}
+@use 'base';
