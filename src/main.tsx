@@ -3,9 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import 'normalize.css';
-import './index.scss';
+import './scss/index.scss';
 import { AppProvider } from './context/AppContext.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import '@fortawesome/free-regular-svg-icons';
 
 const queryClient = new QueryClient();
 
