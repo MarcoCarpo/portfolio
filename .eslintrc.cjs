@@ -9,6 +9,7 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'plugin:react-hooks/recommended',
         'eslint-config-prettier',
+        'plugin:@tanstack/eslint-plugin-query/recommended',
     ],
     parserOptions: {
         ecmaVersion: 'latest',
@@ -16,7 +17,7 @@ module.exports = {
         project: ['./tsconfig.json', './tsconfig.node.json'],
         tsconfigRootDir: __dirname,
     },
-    ignorePatterns: ['dist', '.eslintrc.cjs'],
+    ignorePatterns: ['dist', '.eslintrc.cjs', 'netlify'],
     parser: '@typescript-eslint/parser',
     plugins: ['react-refresh'],
     rules: {
