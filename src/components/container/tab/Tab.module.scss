@@ -1,0 +1,34 @@
+@use '../../../scss/mixins' as *;
+
+.tab {
+    width: 20rem;
+    font-size: 1.6rem;
+    @include flex(column, initial, initial);
+    gap: var(--xs);
+    cursor: pointer;
+
+    &:hover {
+        &__upper-name {
+            color: var(--white);
+        }
+    }
+
+    &__upper {
+        @include flex(row, flex-start, center);
+        gap: var(--xs);
+        padding: 0 var(--xs);
+
+        &-name {
+            color: var(--background-light);
+        }
+    }
+
+    &__lower-bar {
+        width: 100%;
+        height: 0.1rem;
+
+        &--active {
+            background-color: var(--brackets-col);
+        }
+    }
+}

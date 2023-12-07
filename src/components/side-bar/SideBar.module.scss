@@ -1,0 +1,10 @@
+@use '../../scss/mixins' as *;
+
+.sidebar {
+    min-height: 100%;
+    background-color: var(--background-dark);
+    @include flex(column, flex-start, center);
+    gap: var(--lg);
+    padding: var(--sm);
+    padding-top: var(--lg);
+}

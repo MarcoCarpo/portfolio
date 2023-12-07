@@ -1,33 +1,40 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 interface Location {
-	city: string;
-	country: string;
+    city: string;
+    country: string;
 }
 
 interface MobileContact {
-	number: string;
-	prefix: string;
+    number: string;
+    prefix: string;
 }
 
 interface EmailContact {
-	email: string;
+    email: string;
 }
 
 interface SocialLinks {
-	linkedin: string;
-	github: string;
+    linkedin: string;
+    github: string;
 }
 
 interface Bio {
-	name: string;
-	birthday: string;
-	location: Location;
-	contacts: {
-		mobile: MobileContact;
-		email: EmailContact;
-	};
-	social: SocialLinks;
+    name: string;
+    birthday: string;
+    location: Location;
+    contacts: {
+        mobile: MobileContact;
+        email: EmailContact;
+    };
+    social: SocialLinks;
 }
 
 export interface UserJson {
-	bio: Bio;
+    bio: Bio;
+}
+
+export interface Section {
+    name: string;
+    icon: IconProp;
 }

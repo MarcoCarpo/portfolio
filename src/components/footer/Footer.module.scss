@@ -1,0 +1,13 @@
+.footer {
+    background-color: var(--background-dark);
+    padding: var(--xs);
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    a {
+        color: #999;
+        &:hover {
+            color: #666;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.icon {
+    cursor: pointer;
+    color: var(--background-light);
+    transition: var(--transition);
+
+    &:hover {
+        color: var(--white);
+    }
+}

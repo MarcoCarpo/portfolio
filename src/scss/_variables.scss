@@ -1,12 +1,22 @@
 :root {
-	--background: #263238;
-	--background-light: #475D67;
-	--background-dark: #1A2327;
-	--normal-tag-col: #DC6261;
-	--brackets-col: #80CBC4;
-	--react-tag-col: #DCAB61;
-	--white: #FFFFFF;
-	--comments-col: #38464E;
-	--github-col: #6E5494;
-	--linkedin-col: #0072B1;
+    --background: #263238;
+    --background-light: #475d67;
+    --background-dark: #1a2327;
+    --normal-tag-col: #dc6261;
+    --brackets-col: #80cbc4;
+    --react-tag-col: #dcab61;
+    --white: #ffffff;
+    --comments-col: #38464e;
+    --github-col: #6e5494;
+    --linkedin-col: #0072b1;
+
+    --transition: all 0.15s ease-in-out;
+
+    --lg: 4rem;
+    --md: 3rem;
+    --sm: 2rem;
+    --xs: 1rem;
+    --xxs: 0.5rem;
+
+    --font-18: clamp(1.6rem, 0.7917rem + 0.6667vw, 1.8rem);
 }

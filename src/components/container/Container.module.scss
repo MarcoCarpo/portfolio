@@ -1,4 +1,24 @@
+@use '../../scss/mixins' as *;
+
 .container {
     width: 100%;
     height: 100vh;
+    @include flex(column, initial, initial);
+
+    &__upper {
+        display: flex;
+        height: 95%;
+    }
+
+    &__editor {
+        width: 100%;
+        height: 100%;
+        padding: var(--sm);
+        padding-bottom: 0;
+    }
+
+    &__topbar {
+        @include flex(row, flex-start, center);
+        gap: var(--xxs);
+    }
 }
