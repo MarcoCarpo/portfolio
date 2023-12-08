@@ -1,13 +1,26 @@
+@use '../../scss/mixins' as *;
+
 .footer {
     background-color: var(--background-dark);
     padding: var(--xs);
     text-align: center;
     font-size: 14px;
-    color: #999;
+    color: var(--background-light);
+    @include flex(row, space-between, center);
+
     a {
         color: #999;
         &:hover {
             color: #666;
         }
+    }
+
+    &__icons {
+        @include flex(row, center, center);
+        gap: var(--xs);
+    }
+
+    &__name {
+        color: var(--brackets-col);
     }
 }
