@@ -3,20 +3,20 @@ import { Icon } from '..';
 import { useData } from '../../helpers/customHooks';
 import styles from './Footer.module.scss';
 
+const icons = [faGithub, faLinkedin, faInstagram, faTwitter, faResearchgate];
 const Footer = () => {
     const { data } = useData();
 
     return (
         <div className={styles.footer}>
             <span className={styles.footer__icons}>
-                <Icon icon={faGithub} size={25} />
-                <Icon icon={faLinkedin} size={25} />
-                <Icon icon={faInstagram} size={25} />
-                <Icon icon={faTwitter} size={25} />
-                <Icon icon={faResearchgate} size={25} />
+                {icons.map((icon, index) => (
+                    <Icon key={index} icon={icon} />
+                ))}
             </span>
             <span>
-                © 2023 <span className={styles.footer__name}>{data?.bio.name}</span>, All right reserved.
+                Hello, I’m <span className={styles.footer__name}>{data?.bio.name}</span>, a web developer from Trieste,
+                Italy! Welcome on my portfolio! © 2023, All right reserved.
             </span>
         </div>
     );

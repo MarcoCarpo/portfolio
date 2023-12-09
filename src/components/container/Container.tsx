@@ -2,7 +2,11 @@ import { Footer, SideBar, Tab } from '..';
 import { sections } from '../../helpers/data';
 import styles from './Container.module.scss';
 
-const Container = ({ children }: { children: React.ReactNode }) => {
+interface Props {
+    children: React.ReactNode;
+}
+
+const Container = ({ children }: Props) => {
     return (
         <div className={styles.container}>
             <div className={styles.container__upper}>

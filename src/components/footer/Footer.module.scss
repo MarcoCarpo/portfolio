@@ -4,9 +4,10 @@
     background-color: var(--background-dark);
     padding: var(--xs);
     text-align: center;
-    font-size: 14px;
+    font-size: var(--font-18);
     color: var(--background-light);
     @include flex(row, space-between, center);
+    height: 5%;
 
     a {
         color: #999;

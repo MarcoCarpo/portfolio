@@ -38,3 +38,9 @@ export interface Section {
     name: string;
     icon: IconProp;
 }
+
+export interface Tag {
+    tag: string;
+    color: string;
+    tagChildren: Tag[];
+}

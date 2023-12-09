@@ -1,7 +1,8 @@
 import { useData } from './helpers/customHooks';
-import { Container } from './components';
 import { useAppContext } from './context/useAppContext';
 import { AppContextType } from './context/AppContext';
+import { Container } from './components';
+import { ExperienceSection, HomeSection, SkillSection } from './sections';
 
 function App() {
     const { isLoading } = useData();
@@ -11,33 +12,13 @@ function App() {
         return <>Loading...</>;
     }
 
-    switch (selectedSection) {
-        case 'Home':
-            return (
-                <Container>
-                    <h1>Home</h1>
-                </Container>
-            );
-        case 'Experience':
-            return (
-                <Container>
-                    <h1>Experience</h1>
-                </Container>
-            );
-        case 'Skills':
-            return (
-                <Container>
-                    <h1>Skills</h1>
-                </Container>
-            );
-
-        default:
-            return (
-                <Container>
-                    <h1>Home</h1>
-                </Container>
-            );
-    }
+    return (
+        <Container>
+            {selectedSection === 'Home' && <HomeSection />}
+            {selectedSection === 'Experience' && <ExperienceSection />}
+            {selectedSection === 'Skills' && <SkillSection />}
+        </Container>
+    );
 }
 
 export default App;
