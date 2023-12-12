@@ -1,10 +1,30 @@
 import { useData } from '../../helpers/customHooks';
 import Section from '../Section';
 import styles from './HomeSection.module.scss';
+import CodeEditor from './code-editor/CodeEditor';
+import { SyncLoader } from 'react-spinners';
 
 const HomeSection = () => {
-    const { data } = useData();
-    return <Section className={styles['home-section']}>{data?.bio.birthday}</Section>;
+    const { isLoading } = useData();
+
+    const numbers = [...Array(25).keys()];
+
+    return (
+        <Section className={styles['home-section']}>
+            <div className={styles.numbers}>
+                {numbers.map((n) => (
+                    <span key={n + 1}>{n + 1}</span>
+                ))}
+            </div>
+            {isLoading ? (
+                <div className={styles['home-section__loader']}>
+                    <SyncLoader color="var(--brackets-col)" size={20} />
+                </div>
+            ) : (
+                <CodeEditor />
+            )}
+        </Section>
+    );
 };
 
 export default HomeSection;

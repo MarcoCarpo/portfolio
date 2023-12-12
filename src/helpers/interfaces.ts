@@ -10,13 +10,12 @@ interface MobileContact {
     prefix: string;
 }
 
-interface EmailContact {
-    email: string;
-}
-
 interface SocialLinks {
     linkedin: string;
     github: string;
+    instagram: string;
+    twitter: string;
+    researchGate: string;
 }
 
 interface Bio {
@@ -25,7 +24,7 @@ interface Bio {
     location: Location;
     contacts: {
         mobile: MobileContact;
-        email: EmailContact;
+        email: string;
     };
     social: SocialLinks;
 }

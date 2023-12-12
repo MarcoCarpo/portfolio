@@ -1,0 +1,43 @@
+.code-editor {
+    white-space: pre;
+    line-height: 1.5;
+    pre {
+        margin: 0;
+    }
+
+    a {
+        color: var(--white);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    transition: var(--transition);
+}
+
+.comment {
+    color: var(--background-light);
+}
+
+.linkedin {
+    color: var(--linkedin-col);
+}
+
+.github {
+    color: var(--github-col);
+}
+
+.main {
+    color: var(--react-tag-col);
+    text-wrap: wrap;
+}
+
+.name {
+    color: var(--normal-tag-col);
+    word-wrap: pre;
+}
+
+.brackets {
+    color: var(--brackets-col);
+}

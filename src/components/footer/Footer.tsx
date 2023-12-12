@@ -3,20 +3,34 @@ import { Icon } from '..';
 import { useData } from '../../helpers/customHooks';
 import styles from './Footer.module.scss';
 
-const icons = [faGithub, faLinkedin, faInstagram, faTwitter, faResearchgate];
 const Footer = () => {
     const { data } = useData();
+    const icons = [
+        { icon: faGithub, link: data?.bio.social.github },
+        { icon: faLinkedin, link: data?.bio.social.linkedin },
+        { icon: faInstagram, link: data?.bio.social.instagram },
+        { icon: faTwitter, link: data?.bio.social.twitter },
+        { icon: faResearchgate, link: data?.bio.social.researchGate },
+    ];
 
     return (
         <div className={styles.footer}>
             <span className={styles.footer__icons}>
                 {icons.map((icon, index) => (
-                    <Icon key={index} icon={icon} />
+                    <Icon
+                        key={index}
+                        icon={icon.icon}
+                        onClick={() => {
+                            if (icon.link) {
+                                window.open(icon.link, '_blank');
+                            }
+                        }}
+                    />
                 ))}
             </span>
             <span>
                 Hello, I’m <span className={styles.footer__name}>{data?.bio.name}</span>, a web developer from Trieste,
-                Italy! Welcome on my portfolio! © 2023, All right reserved.
+                Italy! Welcome on my portfolio! © {new Date().getFullYear()}, All right reserved.
             </span>
         </div>
     );

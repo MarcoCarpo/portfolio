@@ -20,7 +20,11 @@
     "axios": "^1.6.2",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-loading-skeleton": "^3.3.1",
+    "react-spinners": "^0.13.8",
+    "react-type-animation": "^3.2.0",
+    "react-typing-sequence": "^1.1.2"
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.12.1",
