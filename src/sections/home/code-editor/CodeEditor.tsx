@@ -3,11 +3,10 @@ import styles from './CodeEditor.module.scss';
 import TypeAnimation from 'react-typing-sequence';
 import { useData } from '../../../helpers/customHooks';
 import { useAppContext } from '../../../context/useAppContext';
-import { AppContextType } from '../../../context/AppContext';
 
 const CodeEditor = React.memo(() => {
     const { data, isLoading } = useData();
-    const { setSkipAnimation, skipAnimation } = useAppContext() as AppContextType;
+    const { setSkipAnimation, skipAnimation } = useAppContext()!;
 
     const openTag = (tag: string, isClose = false, className: string, tabs: string) => [
         {
@@ -34,7 +33,7 @@ const CodeEditor = React.memo(() => {
         setTimeout(() => {
             setSkipAnimation();
         }, 15000);
-    }, []);
+    }, [setSkipAnimation]);
 
     if (isLoading) {
         return <div>Loading</div>;

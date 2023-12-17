@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Icon } from '../../../components';
-import { AppContextType } from '../../../context/AppContext';
 import { useAppContext } from '../../../context/useAppContext';
 import { ExperienceItem } from '../../../helpers/interfaces';
 import styles from './ExperienceItem.module.scss';
@@ -10,7 +9,7 @@ interface Props extends ExperienceItem {
     isLast: boolean;
 }
 const ExperienceItemComponent = ({ from, to, company, role, location, type, isLast, url, id }: Props) => {
-    const { setSelectedExperience } = useAppContext() as AppContextType;
+    const { setSelectedExperience } = useAppContext()!;
     const [isOver, setIsOver] = useState(false);
 
     useEffect(() => {

@@ -2,14 +2,13 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { Icon } from '../..';
 import styles from './Tab.module.scss';
 import { useAppContext } from '../../../context/useAppContext';
-import { AppContextType } from '../../../context/AppContext';
 import { useBreakpoint } from '../../../helpers/customHooks';
 
 interface Props {
     section: { name: string; icon: IconProp };
 }
 const Tab = ({ section }: Props) => {
-    const { selectedSection, setSelectedSection, setSkipAnimation } = useAppContext() as AppContextType;
+    const { selectedSection, setSelectedSection, setSkipAnimation } = useAppContext()!;
     const breakpoints = [768, 1080];
     const currentBreakpoint = useBreakpoint(breakpoints);
 

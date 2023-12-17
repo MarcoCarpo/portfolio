@@ -1,11 +1,10 @@
-import React, { useMemo } from 'react';
-import { AppContextType } from '../../../context/AppContext';
+import React, { ForwardedRef, useMemo } from 'react';
 import { useAppContext } from '../../../context/useAppContext';
 import { useData } from '../../../helpers/customHooks';
 import styles from './ExperienceDescription.module.scss';
 
-const ExperienceDescription = React.forwardRef((_: null, ref: React.RefObject<HTMLDivElement>) => {
-    const { selectedExperience } = useAppContext() as AppContextType;
+const ExperienceDescription = React.forwardRef((_: null, ref: ForwardedRef<HTMLDivElement>) => {
+    const { selectedExperience } = useAppContext()!;
     const { data } = useData();
 
     const getSelectedExperience = useMemo(() => {

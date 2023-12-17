@@ -1,12 +1,11 @@
 import styles from './SideBar.module.scss';
 import { Icon } from '..';
-import { AppContextType } from '../../context/AppContext';
 import { useAppContext } from '../../context/useAppContext';
 import { sections } from '../../helpers/data';
 import { Section } from '../../helpers/interfaces';
 
 const SideBar = () => {
-    const { setSelectedSection, selectedSection } = useAppContext() as AppContextType;
+    const { setSelectedSection, selectedSection } = useAppContext()!;
 
     const isSelected = (section: Section) => selectedSection === section.name;
 
