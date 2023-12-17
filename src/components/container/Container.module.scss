@@ -18,10 +18,27 @@
         display: flex;
         flex-direction: column;
         gap: var(--sm);
+
+        @media screen and (max-width: 1080px) {
+            padding: var(--xs);
+        }
     }
 
     &__topbar {
         @include flex(row, flex-start, center);
         gap: var(--xxs);
+
+        @media screen and (max-width: 1080px) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    @media screen and (max-width: 1080px) {
+        height: 100%;
+
+        &__editor {
+            min-height: 100vh;
+        }
     }
 }

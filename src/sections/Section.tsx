@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Section = ({ children, className }: Props) => {
-    return <div className={styles.section + ' ' + className}>{children}</div>;
+    return <div className={styles.section + ' ' + (className ?? '')}>{children}</div>;
 };
 
 export default Section;

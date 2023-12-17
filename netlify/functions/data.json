@@ -20,5 +20,64 @@
 			"twitter": "https://twitter.com/marcocarpona",
 			"researchGate": "https://www.researchgate.net/profile/Marco-Carpona"
 		}
+	},
+	"experience": {
+		"experiences": [
+			{
+				"id": 1,
+				"from": 2009,
+				"to": 2014,
+				"company": "ITS A. Volta",
+				"role": "High School Diploma",
+				"location": "Trieste, Italy",
+				"url": "https://www.voltatrieste.edu.it/",
+				"type": "education",
+				"description": "High School Diploma in Computer Science"
+			},
+			{
+				"id": 2,
+				"from": 2014,
+				"to": 2018,
+				"company": "University of Trieste",
+				"role": "Bachelor's Degree in Natural Sciences",
+				"location": "Trieste, Italy",
+				"url": "https://www.units.it/en",
+				"type": "education",
+				"description": "Bachelor's Degree in Natural Sciences"
+			},
+			{
+				"id": 3,
+				"from": 2018,
+				"to": 2021,
+				"company": "University of Trieste",
+				"role": "Master's Degree in Global Change Ecology",
+				"location": "Trieste, Italy",
+				"url": "https://www.units.it/en",
+				"type": "education",
+				"description": "Master's Degree in Global Change Ecology"
+			},
+			{
+				"id": 4,
+				"from": 2021,
+				"to": 2022,
+				"company": "Beije People First",
+				"role": "Front-End Developer",
+				"location": "Milan, Italy",
+				"url": "https://www.beije.it/en/",
+				"type": "work",
+				"description": "Front-End Developer at Beije People First S.p.A. during the internship period"
+			},
+			{
+				"id": 5,
+				"from": 2022,
+				"to": null,
+				"company": "Dotcom srl",
+				"role": "Front-End Developer",
+				"location": "Trieste, Italy",
+				"url": "https://www.dotcom.ts.it/",
+				"type": "work",
+				"description": "Front-End Developer at Dotcom S.R.L. working on the development of the new website of the company"
+			}
+		]
 	}
 }

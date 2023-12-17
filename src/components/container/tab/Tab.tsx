@@ -3,12 +3,15 @@ import { Icon } from '../..';
 import styles from './Tab.module.scss';
 import { useAppContext } from '../../../context/useAppContext';
 import { AppContextType } from '../../../context/AppContext';
+import { useBreakpoint } from '../../../helpers/customHooks';
 
 interface Props {
     section: { name: string; icon: IconProp };
 }
 const Tab = ({ section }: Props) => {
-    const { selectedSection, setSelectedSection } = useAppContext() as AppContextType;
+    const { selectedSection, setSelectedSection, setSkipAnimation } = useAppContext() as AppContextType;
+    const breakpoints = [768, 1080];
+    const currentBreakpoint = useBreakpoint(breakpoints);
 
     const isSelected = () => selectedSection === section.name;
 
@@ -17,6 +20,7 @@ const Tab = ({ section }: Props) => {
             className={styles.tab}
             onClick={() => {
                 setSelectedSection(section.name);
+                setSkipAnimation();
             }}
         >
             <span className={styles.tab__upper}>
@@ -27,7 +31,7 @@ const Tab = ({ section }: Props) => {
                 >
                     {section.name}
                 </span>
-                {isSelected() ? (
+                {isSelected() && +currentBreakpoint !== breakpoints[0] ? (
                     <svg
                         style={{ marginLeft: 'auto' }}
                         xmlns="http://www.w3.org/2000/svg"

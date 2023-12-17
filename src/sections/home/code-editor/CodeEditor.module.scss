@@ -1,6 +1,8 @@
 .code-editor {
     white-space: pre;
     line-height: 1.5;
+    transition: var(--transition);
+
     pre {
         margin: 0;
     }
@@ -13,7 +15,10 @@
             text-decoration: underline;
         }
     }
-    transition: var(--transition);
+
+    @media screen and (max-width: 768px) {
+        overflow: auto;
+    }
 }
 
 .comment {

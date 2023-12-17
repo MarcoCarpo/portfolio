@@ -1,0 +1,5 @@
+@use '../../scss/mixins' as *;
+
+.experience {
+    @include flex(column, initial, initial);
+}

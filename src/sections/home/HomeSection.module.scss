@@ -1,5 +1,5 @@
 .home-section {
-    font-size: 2.2rem;
+    font-size: clamp(1.2rem, 0.7917rem + 0.6667vw, 1.8rem);
     display: flex;
 
     &__loader {
@@ -18,5 +18,9 @@
         line-height: 1.5;
         color: var(--background-light);
         margin-right: var(--md);
+
+        @media screen and (max-width: 1080px) {
+            margin-right: var(--sm);
+        }
     }
 }

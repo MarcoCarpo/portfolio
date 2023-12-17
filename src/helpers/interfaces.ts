@@ -31,6 +31,7 @@ interface Bio {
 
 export interface UserJson {
     bio: Bio;
+    experience: Experience;
 }
 
 export interface Section {
@@ -42,4 +43,20 @@ export interface Tag {
     tag: string;
     color: string;
     tagChildren: Tag[];
+}
+
+export interface Experience {
+    experiences: ExperienceItem[];
+}
+
+export interface ExperienceItem {
+    from: string;
+    to: string;
+    company: string;
+    role: string;
+    location: string;
+    url: string;
+    type: 'work' | 'education';
+    id: number;
+    description: string;
 }

@@ -10,3 +10,41 @@ export const useData = () => {
 
     return { data, error, isLoading };
 };
+
+import { useEffect, useState } from 'react';
+
+export const useBreakpoint = (customBreakpoints: number[]) => {
+    const [breakpoint, setBreakpoint] = useState('');
+
+    const handleResize = () => {
+        const width = window.innerWidth;
+        let newBreakpoint = '';
+
+        if (width < customBreakpoints[0]) {
+            newBreakpoint = customBreakpoints[0] as string;
+        } else {
+            for (let i = 1; i < customBreakpoints.length; i++) {
+                if (width < customBreakpoints[i]) {
+                    newBreakpoint = customBreakpoints[i - 1] as string;
+                    break;
+                }
+            }
+            if (!newBreakpoint) {
+                newBreakpoint = customBreakpoints[customBreakpoints.length - 1] as string;
+            }
+        }
+
+        setBreakpoint(newBreakpoint);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return breakpoint;
+};

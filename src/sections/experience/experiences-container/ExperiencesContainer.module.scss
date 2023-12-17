@@ -1,0 +1,11 @@
+.experience {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.experiences-container {
+    @media screen and (max-width: 1080px) {
+        overflow: auto;
+    }
+}

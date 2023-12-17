@@ -14,16 +14,19 @@ const CodeEditor = React.memo(() => {
             content: tabs + '<',
             className: styles.brackets,
             tag: 'span',
+            key: tag + '1' + isClose,
         },
         {
             content: tag,
             className: styles[className],
             tag: 'span',
+            key: tag + '2' + isClose,
         },
         {
             content: isClose ? '/>' : '>',
             className: styles.brackets,
             tag: 'span',
+            key: tag + '3' + isClose,
         },
     ];
 

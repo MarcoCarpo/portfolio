@@ -4,7 +4,7 @@
     background-color: var(--background-dark);
     padding: var(--xs);
     text-align: center;
-    font-size: var(--font-18);
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
     color: var(--background-light);
     @include flex(row, space-between, center);
     height: 5%;
@@ -23,5 +23,12 @@
 
     &__name {
         color: var(--brackets-col);
+    }
+
+    @media only screen and (max-width: 1080px) {
+        flex-direction: column-reverse;
+        min-height: 5%;
+        height: unset;
+        gap: var(--xs);
     }
 }

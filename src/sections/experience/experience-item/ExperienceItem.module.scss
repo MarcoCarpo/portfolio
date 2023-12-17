@@ -1,0 +1,113 @@
+@use '../../../scss/mixins' as *;
+
+.experience-item {
+    font-size: 1.6rem;
+    @include flex(row, flex-end, flex-start);
+    gap: 2rem;
+
+    --border-width: 0.5rem;
+    --distance: 4rem;
+    --icon-width: 4.5rem;
+
+    &--is-over {
+        .experience-item__date {
+            text-decoration: underline;
+        }
+    }
+
+    &--is-last {
+        .experience-item__icon::after {
+            display: none;
+        }
+    }
+
+    &--work {
+        --background-color: #abc099;
+        --color: #7d9867;
+    }
+
+    &--education {
+        --background-color: #f9adac;
+        --color: #dc6261;
+    }
+
+    &--work,
+    &--education {
+        .experience-item {
+            &__icon {
+                background-color: var(--background-color);
+                border: var(--border-width) solid var(--color);
+
+                &::after {
+                    background: var(--color);
+                }
+
+                path {
+                    fill: var(--color) !important;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        width: var(--icon-width);
+        height: var(--icon-width);
+        border-radius: 10rem;
+        @include flex(row, center, center);
+        margin-right: auto;
+        position: relative;
+        margin-bottom: var(--distance);
+
+        &::after {
+            content: '';
+            width: var(--border-width);
+            height: calc(var(--distance) + var(--border-width));
+            top: 100%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    &__text {
+        margin-top: calc(var(--icon-width) / 2);
+        transform: translate(0, -50%);
+        @include flex(row, flex-end, initial);
+        gap: var(--xs);
+        flex: 1;
+
+        a {
+            color: var(--white);
+            text-decoration: underline;
+            transition: var(--transition);
+
+            &:hover {
+                color: var(--brackets-col);
+            }
+        }
+    }
+
+    &__date {
+        color: var(--brackets-col);
+        flex: 1;
+    }
+
+    @media screen and (max-width: 1080px) {
+        font-size: 16px;
+
+        --border-width: 0.3rem;
+        --distance: 6rem;
+        --icon-width: 4rem;
+
+        &__text {
+            display: inline;
+            flex: 1;
+            transform: initial;
+            margin-top: 0px;
+        }
+
+        &__date {
+            margin-right: var(--md);
+        }
+    }
+}

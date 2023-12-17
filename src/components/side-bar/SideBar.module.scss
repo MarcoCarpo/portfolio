@@ -7,4 +7,12 @@
     gap: var(--lg);
     padding: var(--sm);
     padding-top: var(--lg);
+    svg {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+
+    @media screen and (max-width: 1080px) {
+        display: none;
+    }
 }

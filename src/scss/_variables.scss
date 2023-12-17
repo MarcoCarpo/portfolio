@@ -10,6 +10,7 @@
     --github-col: #6e5494;
     --linkedin-col: #0072b1;
     --purple-col: #b48cf6;
+    --green-col: #a9dc76;
 
     --transition: all 0.15s ease-in-out;
 
@@ -18,6 +19,8 @@
     --sm: 2rem;
     --xs: 1rem;
     --xxs: 0.5rem;
+
+    --tablet-breakpoint: 1080px;
 
     --font-18: clamp(1.6rem, 0.7917rem + 0.6667vw, 1.8rem);
 }

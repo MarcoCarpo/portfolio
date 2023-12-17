@@ -2,7 +2,7 @@ import { useData } from '../../helpers/customHooks';
 import Section from '../Section';
 import styles from './HomeSection.module.scss';
 import CodeEditor from './code-editor/CodeEditor';
-import { SyncLoader } from 'react-spinners';
+import { BeatLoader } from 'react-spinners';
 
 const HomeSection = () => {
     const { isLoading } = useData();
@@ -18,7 +18,7 @@ const HomeSection = () => {
             </div>
             {isLoading ? (
                 <div className={styles['home-section__loader']}>
-                    <SyncLoader color="var(--brackets-col)" size={20} />
+                    <BeatLoader color="var(--brackets-col)" size={20} />
                 </div>
             ) : (
                 <CodeEditor />

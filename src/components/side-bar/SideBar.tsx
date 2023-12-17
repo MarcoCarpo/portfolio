@@ -15,7 +15,6 @@ const SideBar = () => {
             {sections.map((s) => (
                 <Icon
                     icon={s.icon}
-                    size={40}
                     key={s.name}
                     color={isSelected(s) ? 'var(--white)' : ''}
                     onClick={() => {
