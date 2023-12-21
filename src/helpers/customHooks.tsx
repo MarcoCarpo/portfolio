@@ -11,10 +11,11 @@ export const useData = () => {
     return { data, error, isLoading };
 };
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
-export const useBreakpoint = (customBreakpoints: number[]) => {
+export const useBreakpoint = () => {
     const [breakpoint, setBreakpoint] = useState('');
+    const customBreakpoints = useMemo(() => [768, 1280], []);
 
     useEffect(() => {
         const handleResize = () => {

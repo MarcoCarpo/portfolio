@@ -1,0 +1,14 @@
+.skills-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__icons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        flex: 1;
+    }
+}

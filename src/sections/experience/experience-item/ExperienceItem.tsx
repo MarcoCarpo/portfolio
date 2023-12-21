@@ -37,7 +37,7 @@ const ExperienceItemComponent = ({ from, to, company, role, location, type, isLa
                 <span className={styles['experience-item__date']}>
                     {from} - {to || 'Present'}
                 </span>
-                <span>{role}</span> -{' '}
+                <span className={styles['experience-item__role']}>{role}</span> -{' '}
                 <a href={url} target="_blank" rel="noreferrer">
                     {company}
                 </a>{' '}

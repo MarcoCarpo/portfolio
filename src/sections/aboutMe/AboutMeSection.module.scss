@@ -1,0 +1,33 @@
+.about-me {
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--lg);
+    max-width: 80rem;
+    padding: 0 1rem;
+    line-height: 1.3;
+    font-weight: 100;
+    margin: 0 auto;
+
+    strong {
+        color: var(--brackets-col);
+    }
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    max-height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -1px 6px 16px -5px rgba(0, 0, 0, 1);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

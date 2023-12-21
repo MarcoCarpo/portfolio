@@ -5,9 +5,9 @@
     @include flex(row, flex-end, flex-start);
     gap: 2rem;
 
-    --border-width: 0.5rem;
-    --distance: 4rem;
-    --icon-width: 4.5rem;
+    --border-width: 0.3rem;
+    --distance: 2rem;
+    --icon-width: 4rem;
 
     &--is-over {
         .experience-item__date {
@@ -22,13 +22,13 @@
     }
 
     &--work {
-        --background-color: #abc099;
-        --color: #7d9867;
+        --background-color: #f9adac;
+        --color: #dc6261;
     }
 
     &--education {
-        --background-color: #f9adac;
-        --color: #dc6261;
+        --background-color: #abc099;
+        --color: #7d9867;
     }
 
     &--work,
@@ -85,6 +85,10 @@
                 color: var(--brackets-col);
             }
         }
+    }
+
+    &__role {
+        color: var(--color);
     }
 
     &__date {

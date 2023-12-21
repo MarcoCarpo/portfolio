@@ -9,8 +9,7 @@ interface Props {
 }
 const Tab = ({ section }: Props) => {
     const { selectedSection, setSelectedSection, setSkipAnimation } = useAppContext()!;
-    const breakpoints = [768, 1080];
-    const currentBreakpoint = useBreakpoint(breakpoints);
+    const currentBreakpoint = useBreakpoint();
 
     const isSelected = () => selectedSection === section.name;
 
@@ -30,7 +29,7 @@ const Tab = ({ section }: Props) => {
                 >
                     {section.name}
                 </span>
-                {isSelected() && +currentBreakpoint !== breakpoints[0] ? (
+                {isSelected() && +currentBreakpoint !== 768 ? (
                     <svg
                         style={{ marginLeft: 'auto' }}
                         xmlns="http://www.w3.org/2000/svg"

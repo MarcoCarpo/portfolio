@@ -9,6 +9,7 @@ import './scss/index.scss';
 import '@fortawesome/free-regular-svg-icons';
 import '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/react-fontawesome';
 
 const queryClient = new QueryClient({
     defaultOptions: {

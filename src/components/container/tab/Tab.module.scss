@@ -21,6 +21,10 @@
         &-name {
             color: var(--background-light);
         }
+
+        @media screen and (max-width: 1080px) {
+            justify-content: center;
+        }
     }
 
     &__lower-bar {
