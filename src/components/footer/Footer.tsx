@@ -2,7 +2,6 @@ import { faGithub, faInstagram, faLinkedin, faResearchgate, faTwitter } from '@f
 import { Icon } from '..';
 import { useData, useIubenda } from '../../helpers/customHooks';
 import styles from './Footer.module.scss';
-import { Helmet } from 'react-helmet';
 
 const Footer = () => {
     const { data } = useData();
