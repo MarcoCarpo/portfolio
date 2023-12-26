@@ -1,7 +1,8 @@
 import { faGithub, faInstagram, faLinkedin, faResearchgate, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { Icon } from '..';
-import { useData } from '../../helpers/customHooks';
+import { useData, useIubenda } from '../../helpers/customHooks';
 import styles from './Footer.module.scss';
+import { Helmet } from 'react-helmet';
 
 const Footer = () => {
     const { data } = useData();
@@ -12,6 +13,8 @@ const Footer = () => {
         { icon: faTwitter, link: data?.bio.social.twitter },
         { icon: faResearchgate, link: data?.bio.social.researchGate },
     ];
+
+    const { CookiePolicy, PrivacyPolicy } = useIubenda();
 
     return (
         <div className={styles.footer}>
@@ -28,9 +31,11 @@ const Footer = () => {
                     />
                 ))}
             </span>
+
             <span>
                 Hello, I’m <span className={styles.footer__name}>{data?.bio.name}</span>, a web developer from Trieste,
-                Italy! Welcome on my portfolio! © {new Date().getFullYear()}, All right reserved.
+                Italy! Welcome on my portfolio! © {new Date().getFullYear()}, All right reserved. <CookiePolicy /> |{' '}
+                <PrivacyPolicy />
             </span>
         </div>
     );
