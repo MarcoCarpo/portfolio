@@ -31,7 +31,7 @@ const Footer = () => {
                 ))}
             </span>
 
-            <span>
+            <span style={{ lineHeight: 2.5 }}>
                 Hello, I’m <span className={styles.footer__name}>{data?.bio.name}</span>, a web developer from Trieste,
                 Italy! Welcome on my portfolio! © {new Date().getFullYear()}, All right reserved. <CookiePolicy /> |{' '}
                 <PrivacyPolicy />

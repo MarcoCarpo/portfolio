@@ -82,7 +82,6 @@ export const useIubenda = () => {
         const script4 = document.createElement('script');
         script4.type = 'text/javascript';
         script4.src = '//cdn.iubenda.com/cs/iubenda_cs.js';
-        script4.charset = 'UTF-8';
         script4.async = true;
         document.body.appendChild(script4);
     }, []);
