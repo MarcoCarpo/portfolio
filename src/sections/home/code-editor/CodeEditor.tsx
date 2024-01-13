@@ -80,6 +80,14 @@ const CodeEditor = React.memo(() => {
             target: '_blank',
         },
         ...openTag('Github', true, 'github', ''),
+        ...openTag('ResearchGate', false, 'researchGate', '\n\t\t'),
+        {
+            content: data.bio.social.researchGate,
+            tag: 'a',
+            href: data.bio.social.researchGate,
+            target: '_blank',
+        },
+        ...openTag('ResearchGate', true, 'researchGate', ''),
         ...openTag('Social', true, 'main', '\n\t'),
         {
             content: '\n',
